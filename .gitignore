@@ -1,0 +1,19 @@
+/node_modules/
+.settings/
+.classpath
+.project
+.gradle
+.DS_Store
+**/target/**
+**/tgrget
+.factorypath
+**/config/*.yml
+~
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+
+/target/
