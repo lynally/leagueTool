@@ -18,10 +18,13 @@ db.on('disconnected', () => {
 });
 mongoose.connect('mongodb://localhost/leagues');
 
-// 创建一个Schema
+// 创建一个联赛
 const league = Schema({
   name: String,
-  data:Object,
+  teams:Array,
+  startDate:String,
+  week:String,
+  dailyTime:String
 });
 
 mongoose.model('League', league);  // Schema编译成Model  (相当于Class（文档）)
