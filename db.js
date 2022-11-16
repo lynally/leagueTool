@@ -16,26 +16,15 @@ db.on('connected', () => {
 db.on('disconnected', () => {
   console.log('MongoDB connected disconnected');
 });
-mongoose.connect('mongodb://localhost/newDB');
+mongoose.connect('mongodb://localhost/leagues');
 
 // 创建一个Schema
-const Star = Schema({
+const league = Schema({
   name: String,
-  ticket:Number,
-  history:Array
+  data:Object,
 });
 
-mongoose.model('Star', Star);  // Schema编译成Model  (相当于Class（文档）)
-
-
-// 创建一个Schema
-const People = Schema({
-  name: String,
-  ticket:Number,
-  history:Array
-});
-mongoose.model('People', People);  // Schema编译成Model  (相当于Class（文档）)
-
+mongoose.model('League', league);  // Schema编译成Model  (相当于Class（文档）)
 
 
 module.exports = mongoose;
