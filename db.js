@@ -23,8 +23,10 @@ const league = Schema({
   name: String,
   teams: Array,
   startDate: String,
-  week: String,
-  dailyTime: String
+  startDateValue: Number,
+  week: Array,
+  dailyTime: Array,
+  dailyTimeValue: Array
 })
 
 mongoose.model('League', league) // Schema编译成Model  (相当于Class（文档）)

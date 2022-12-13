@@ -16,7 +16,7 @@ app.all('*', function(req, res, next) {
   res.header('Access-Control-Allow-Headers', 'content-type')
   // 跨域允许的请求方式
   res.header('Access-Control-Allow-Methods', 'DELETE,PUT,POST,GET,OPTIONS')
-  if (req.method.toLowerCase() == 'options') {res.send(200)} // 让options 尝试请求快速结束
+  if (req.method.toLowerCase() === 'options') {res.send(200)} // 让options 尝试请求快速结束
   else {next()}
 })
 
